@@ -1,0 +1,35 @@
+[
+  {
+    "id": 101,
+    "category": "Misión IMF",
+    "question": "¿Cuál es el valor del Output Gap en estado estacionario?",
+    "options": ["0", "1", "2", "Depende"],
+    "answer": "0"
+  },
+  {
+    "id": 102,
+    "category": "Misión IMF",
+    "question": "¿Cuál es la meta de inflación en el steady state?",
+    "options": ["1%", "2%", "3%", "4%"],
+    "answer": "2%"
+  },
+  {
+    "id": 103,
+    "category": "Misión IMF",
+    "question": "¿Cuál es la tasa neutral nominal en el steady state?",
+    "options": ["1.5%", "2.0%", "2.5%", "3.0%"],
+    "answer": "2.5%"
+  },
+  {
+    "id": 104,
+    "category": "Misión IMF",
+    "question": "Si la inflación proyectada supera la meta, ¿qué sugiere la regla monetaria?",
+    "options": [
+      "Reducir tasa",
+      "Mantener tasa",
+      "Subir tasa",
+      "Eliminar meta"
+    ],
+    "answer": "Subir tasa"
+  }
+]

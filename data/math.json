@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "category": "Matemática Curiosa",
+    "question": "2, 6, 12, 20, 30, ?",
+    "options": ["36", "40", "42", "44"],
+    "answer": "42"
+  },
+  {
+    "id": 2,
+    "category": "Matemática Curiosa",
+    "question": "1, 1, 2, 3, 5, 8, ?",
+    "options": ["11", "12", "13", "15"],
+    "answer": "13"
+  },
+  {
+    "id": 3,
+    "category": "Matemática Curiosa",
+    "question": "¿Cuántos meses tienen 28 días?",
+    "options": ["1", "2", "11", "12"],
+    "answer": "12"
+  }
+]

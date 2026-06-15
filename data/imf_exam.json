@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "category": "IMF Certification",
+    "question": "What is the primary application of the small canonical quarterly projection model (QPM)?",
+    "options": [
+      "Short-term liquidity forecasting",
+      "Monetary policy analysis and forecasting",
+      "Bank stress testing",
+      "Debt sustainability analysis"
+    ],
+    "answer": "Monetary policy analysis and forecasting",
+    "difficulty": "easy"
+  },
+  {
+    "id": 2,
+    "category": "IMF Certification",
+    "question": "What are the key monetary policy transmission channels in the canonical QPM?",
+    "options": [
+      "Credit and housing",
+      "Fiscal and external",
+      "Interest rate and exchange rate",
+      "Wages and productivity"
+    ],
+    "answer": "Interest rate and exchange rate",
+    "difficulty": "easy"
+  },
+  {
+    "id": 3,
+    "category": "IMF Certification",
+    "question": "In the steady state of the QPM, what is the value of the output gap?",
+    "options": [
+      "-1",
+      "0",
+      "1",
+      "Depends on inflation"
+    ],
+    "answer": "0",
+    "difficulty": "easy"
+  }
+]

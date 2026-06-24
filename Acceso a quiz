@@ -1,0 +1,63 @@
+Opción A (la que ya funciona)
+
+Servidor local:
+
+cd D:\dev\qpm-quest
+python -m http.server 8000
+
+y abrir:
+
+http://127.0.0.1:8000/
+
+Esta es la forma correcta de desarrollo.
+
+Opción B
+
+Abrir directamente desde GitHub.
+
+Pero para eso el proyecto debe estar publicado mediante:
+
+GitHub GitHub Pages.
+
+Entonces tendrías una URL tipo:
+
+https://wilsongutierrez1960.github.io/qpm-quest/
+
+y podrías usarlo sin levantar servidor local.
+
+Lo que recomiendo
+
+Para QPM Quest v0.2:
+
+Desarrollo
+↓
+Servidor local (Python)
+
+Cuando tengamos:
+
+puntaje
+progreso
+navegación
+explicaciones
+
+recién ahí:
+
+GitHub Pages
+↓
+Versión pública
+
+Así podrás abrir el quiz desde cualquier navegador, incluso desde otra máquina, sin terminal.
+
+Ventaja adicional
+
+Cuando publiques en GitHub Pages tendrás dos modos:
+
+Modo desarrollo
+Windows/Mint
++
+python -m http.server
+
+Modo producción
+GitHub Pages
+
+que es exactamente el flujo profesional habitual.

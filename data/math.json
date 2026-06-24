@@ -1,11 +1,12 @@
 [
   {
-    "id": 1,
-    "category": "Matemática Curiosa",
-    "question": "2, 6, 12, 20, 30, ?",
-    "options": ["36", "40", "42", "44"],
-    "answer": "42"
-  },
+  "id": 1,
+  "category": "Matemática Curiosa",
+  "question": "2, 6, 12, 20, 30, ?",
+  "options": ["36", "40", "42", "44"],
+  "answer": "42",
+  "explanation": "La secuencia sigue la regla n(n+1)."
+},
   {
     "id": 2,
     "category": "Matemática Curiosa",

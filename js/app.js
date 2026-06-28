@@ -6,14 +6,31 @@ let score = 0;
 let currentQuestion = 0;
 let answered = false;
 let mistakes = [];
+let examMode = false;
 
 document
 .getElementById("btnMath")
 .addEventListener("click", () => {
+
+    examMode = false;
+
     loadQuiz("data/math.json");
+
 });
 
 document
+.getElementById("btnExam")
+.addEventListener("click", () => {
+
+    examMode = !examMode;
+
+    const btn = document.getElementById("btnExam");
+
+    btn.textContent = examMode
+        ? "Exam Mode: ON"
+        : "Exam Mode";
+
+});document
 .getElementById("btnQpm")
 .addEventListener("click", () => {
     loadQuiz("data/qpm.json");
@@ -101,79 +118,61 @@ document.getElementById("explanation")
 }
 
 
-function checkAnswer(
-    selected,
-    correct,
-    item,
-    buttons
-) {
-    if (answered || transitioning) return;
+function checkAnswer(selected) {
+
+    if (answered) return;
 
     answered = true;
-    transitioning = true;
 
-    buttons.forEach(btn => {
-        btn.disabled = true;
-    });
+    const item = currentData[currentQuestion];
+    const correct = item.answer;
 
     if (selected === correct) {
 
-    score++;
+        score++;
 
-} else {
+    } else {
 
-    mistakes.push({
-        index: currentQuestion,
-        question: item.question,
-        selected: selected,
-        correct: correct
-    });
+        mistakes.push({
+            index: currentQuestion,
+            question: item.question,
+            selected: selected,
+            correct: correct
+        });
 
-}
+    }
 
     document.getElementById("score").textContent =
         `Puntaje: ${score}`;
 
-    buttons.forEach(btn => {
-        const value = btn.dataset.value;
+    if (!examMode) {
 
-        if (value === correct) {
-            btn.classList.add("correct");
+        buttons.forEach(btn => {
+
+            const value = btn.dataset.value;
+
+            if (value === correct) {
+                btn.classList.add("correct");
+            }
+
+            if (value === selected && selected !== correct) {
+                btn.classList.add("incorrect");
+            }
+
+        });
+
+        if (item.explanation) {
+
+            document.getElementById("explanation").innerHTML =
+                `<strong>Explicación:</strong><br>${item.explanation}`;
+
         }
 
-        if (value === selected && selected !== correct) {
-            btn.classList.add("incorrect");
-        }
-    });
-
-    
-if (item.explanation) {
-
-    document.getElementById("explanation")
-        .innerHTML = `<strong>Explicación:</strong>
-        <br>${item.explanation}`;
-}
-
-
-enableNextOrAuto();
-}
-
-function enableNextOrAuto() {
-    const nextBtn = document.getElementById("nextBtn");
-
-    if (autoAdvance) {
-        nextBtn.style.display = "none";
-
-        setTimeout(() => {
-            nextQuestion();
-        }, 1200); // delay estilo IMF (feedback visible antes de avanzar)
-
-    } else {
-        nextBtn.disabled = false;
-        nextBtn.style.opacity = 1;
     }
-}
 
+    enableNextOrAuto();
+
+}
 function nextQuestion() {
 
     transitioning = false;
